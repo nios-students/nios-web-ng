@@ -27,6 +27,9 @@ const vitePressSidebarOptions = [genSidebarConfig("wiki")]
 const vitePressOptions = {
   title: "NIOS Students",
   description: "Simple Guides made by NIOS Students for NIOS Students.",
+  markdown: {
+    math: true
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     // Used this as reference: https://github.com/FOSSonTop/website/blob/main/docs/.vitepress/config.mts
@@ -53,7 +56,6 @@ const vitePressOptions = {
     ignoreDeadLinks: [
       '/\S+@\S+\.\S+/'
     ],
-    math: true,
     editLink: {
       pattern: ({ filePath }) => {
         const rest = filePath.split("/").slice(1).join("/")
