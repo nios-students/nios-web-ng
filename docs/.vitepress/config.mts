@@ -29,6 +29,7 @@ const vitePressOptions = {
   description: "Simple Guides made by NIOS Students for NIOS Students.",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    // Used this as reference: https://github.com/FOSSonTop/website/blob/main/docs/.vitepress/config.mts
     nav: [
       { text: 'Home', link: '/' },
       {
@@ -39,7 +40,7 @@ const vitePressOptions = {
           { text: 'Chat Groups', link: '/wiki/chat/' }
         ],
       }
-  ],
+    ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/nios-students' }
     ],
@@ -51,7 +52,12 @@ const vitePressOptions = {
     math: true,
     editLink: {
       pattern: ({ filePath }) => {
-      	const rest = filePath.split("/").slice(1).join("/")
+        const rest = filePath.split("/").slice(1).join("/")
+        if (filePath.includes('wiki')) {
+          return `https://github.dev/nios-students/docs/blob/contents/wiki/${rest}`
+        } else if (filePath.includes('home')) {
+          return `https://github.dev/nios-students/docs/blob/contents/home/${rest}`
+        }
         return `https://github.dev/nios-students/docs/blob/contents/${rest}`
       }
     },
