@@ -41,7 +41,7 @@ const vitePressOptions = {
     cleanUrls: true,
     lastUpdated: true,
     ignoreDeadLinks: [
-      '*\@*'
+      '*@*'
     ],
     math: true,
     editLink: {
