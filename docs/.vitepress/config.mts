@@ -3,6 +3,7 @@ import { withSidebar } from 'vitepress-sidebar';
 import { withMermaid } from "vitepress-plugin-mermaid";
 
 // https://vitepress.dev/reference/site-config
+// Used this as reference: https://github.com/FOSSonTop/website/tree/main/docs/.vitepress/config.mts
 function genSidebarConfig(doc: string){
   return {
     documentRootPath: 'docs',
