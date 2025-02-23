@@ -9,7 +9,7 @@ function genSidebarConfig(doc: string){
     documentRootPath: 'docs',
     scanStartPath: doc,
     resolvePath: `/${doc}/`,
-    collapsed: false,
+    collapsed: true,
     hyphenToSpace: true,
     capitalizeEachWords: true,
     underscoreToSpace: true,
