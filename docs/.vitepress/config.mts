@@ -41,7 +41,8 @@ const vitePressOptions = {
     cleanUrls: true,
     lastUpdated: true,
     ignoreDeadLinks: [
-      '/\S+@\S+\.\S+/'
+      /^mailto:/,
+      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     ],
     math: true,
     editLink: {
