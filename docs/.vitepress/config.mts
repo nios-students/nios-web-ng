@@ -31,18 +31,22 @@ const vitePressOptions = {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Getting Started', link: '/home/start/' },
-      { text: 'How To', link: '/home/how-to/' },
-      { text: 'Chat Groups', link: '/wiki/chat/' }
-    ],
+      {
+        text: 'Wiki Navigation',
+        items: [
+          { text: 'Getting Started', link: '/home/start/' },
+          { text: 'How To', link: '/home/how-to/' },
+          { text: 'Chat Groups', link: '/wiki/chat/' }
+        ],
+      }
+  ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/nios-students' }
     ],
     cleanUrls: true,
     lastUpdated: true,
     ignoreDeadLinks: [
-      /^mailto:/,
-      /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+      '/\S+@\S+\.\S+/'
     ],
     math: true,
     editLink: {
