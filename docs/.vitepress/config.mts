@@ -32,6 +32,10 @@ const vitePressOptions = {
     // Used this as reference: https://github.com/FOSSonTop/website/blob/main/docs/.vitepress/config.mts
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Contribute', link: "/contribute" },
+      { text: 'Request Takedown', link: "/takedown" },
+      { text: 'Typography', link: "/typography" },
+      { text: 'Queries and Suggestions', link: "https://github.com/nios-students/docs/discussions" },
       {
         text: 'Wiki Navigation',
         items: [
@@ -57,7 +61,13 @@ const vitePressOptions = {
           return `https://github.dev/nios-students/docs/blob/contents/wiki/${rest}`
         } else if (filePath.includes('home')) {
           return `https://github.dev/nios-students/docs/blob/contents/home/${rest}`
-        }
+        } else if (filePath.includes('contribute')) {
+          return `https://github.dev/nios-students/helper_scripts/blob/main/md/contribute.md`
+        } else if (filePath.includes('takedown')) {
+          return `https://github.dev/nios-students/helper_scripts/blob/main/md/takedown.md`
+        } else if (filePath.includes('typography')) {
+          return `https://github.dev/nios-students/helper_scripts/blob/main/md/typography.md`
+        } else {
         return `https://github.dev/nios-students/docs/blob/contents/${rest}`
       }
     },
