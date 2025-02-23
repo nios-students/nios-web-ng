@@ -68,7 +68,8 @@ const vitePressOptions = {
         } else if (filePath.includes('typography')) {
           return `https://github.dev/nios-students/helper_scripts/blob/main/md/typography.md`
         } else {
-        return `https://github.dev/nios-students/docs/blob/contents/${rest}`
+          return `https://github.dev/nios-students/docs/blob/contents/${rest}`
+        }
       }
     },
     search: {
@@ -82,7 +83,7 @@ const vitePressOptions = {
       }
     }
   }
-}
+};
 
 const config = defineConfig(withSidebar(vitePressOptions, vitePressSidebarOptions))
 const configWithMermaid = withMermaid(config)
