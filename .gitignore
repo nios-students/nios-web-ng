@@ -1,0 +1,11 @@
+docs/.vitepress/dist
+docs/.vitepress/cache
+node_modules
+docs/contribute.md
+docs/takedown.md
+docs/typography.md
+docs/*.md
+docs/wiki*
+docs/helper-scripts
+node_modules
+*.md
