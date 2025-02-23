@@ -5,6 +5,7 @@ docs/contribute.md
 docs/takedown.md
 docs/typography.md
 docs/*.md
+docs/temp/
 docs/wiki*
 docs/helper-scripts
 node_modules
