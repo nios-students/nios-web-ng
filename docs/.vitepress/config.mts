@@ -47,9 +47,8 @@ const vitePressOptions = {
     math: true,
     editLink: {
       pattern: ({ filePath }) => {
-        const repo = filePath.split("/")[0]
-	const rest = filePath.split("/").slice(1).join("/")
-        return `https://github.dev/FOSSonTop/${repo}/blob/master/${rest}`
+      	const rest = filePath.split("/").slice(1).join("/")
+        return `https://github.dev/nios-students/docs/blob/contents/${rest}`
       }
     },
     search: {
